@@ -1,7 +1,7 @@
-fadaac9d5a03a543da7cdedf77768941 *DESCRIPTION
+2cb8f0c8b88b8bf68404be6f0007d40c *DESCRIPTION
 9933de5bb9f0f94b542e56f6c29dd541 *LICENSE
 ddb7d57a0a7416c26f0277880fde9c0a *NAMESPACE
-f217b5d88470f23b64e47f3bc6050ee9 *NEWS.md
+12ea23f62d1588b981311ab07af0f3aa *NEWS.md
 2575ecd2ad368753fbaec82da043ad01 *R/assessModelQuality.R
 d57c869fd6606ab4c76f8f7421dd332d *R/assessModelStability.R
 fd4c2fa078261d85cd10723a4731bdf8 *R/calculateFMS.R
@@ -37,7 +37,7 @@ e479e0471a4bc0d5055195af6a1f8814 *data/Fujita2023.rda
 3054fa6dbc877f5b13664c6fdd172e7c *data/vanderPloeg2024.rda
 5dd6233dcc725bac39923edadf39b218 *inst/doc/Fujita2023_analysis.R
 d2471ddb4a636562c5e9c6ec21afa877 *inst/doc/Fujita2023_analysis.Rmd
-fabefe45b12326afad1c4d3730e75bb0 *inst/doc/Fujita2023_analysis.html
+a51f253a453ea6bd138ae951e6061b8c *inst/doc/Fujita2023_analysis.html
 ee275242f673788bb1d54d70189418ea *inst/doc/PARAFAC_introduction.R
 8071303d69b0dbd228f99888ca002190 *inst/doc/PARAFAC_introduction.Rmd
 8884d7d77cee750a93469ad58f10a816 *inst/doc/PARAFAC_introduction.html
@@ -106,7 +106,7 @@ f4b2edd2a51416dc8304aca390c3a130 *tests/testthat/test-importTreeSummarizedExperi
 e653f1e85c17e901693ae10b7d898505 *tests/testthat/test-parafac.R
 f98f3196cf9e5534f08447762ef2dbdd *tests/testthat/test-parafac_core_als.R
 15f58795615ced23de9ffd189ead21b8 *tests/testthat/test-parafac_fun.R
-02fa3c3087e16669afb2ce9845515c99 *tests/testthat/test-parafac_gradient.R
+67b50c4b4f002078e1fdcf33334d0b70 *tests/testthat/test-parafac_gradient.R
 f7b3cce40bff926535d56aaa5c088d18 *tests/testthat/test-plotModelMetric.R
 14698bf27e10670779d5360199a241ae *tests/testthat/test-plotModelStability.R
 9c1f432c76c32b748e01dd968e652485 *tests/testthat/test-plotModelTCCs.R
