@@ -59,10 +59,7 @@ plotPARAFACmodel(finalModel$Fac, processedFujita, 3, colourCols, legendTitles, x
   overallTitle = "Fujita PARAFAC model")
 
 ## ----flip loadings------------------------------------------------------------
-finalModel$Fac[[1]][,2] = -1 * finalModel$Fac[[1]][,2] # mode 1 component 2
-finalModel$Fac[[1]][,3] = -1 * finalModel$Fac[[1]][,3] # mode 1 component 3
-finalModel$Fac[[2]][,3] = -1 * finalModel$Fac[[2]][,3] # mode 2 component 3
-finalModel$Fac[[3]][,2] = -1 * finalModel$Fac[[3]][,2] # mode 3 component 2
+finalModel = flipLoadings(finalModel, processedFujita$data)
 
 plotPARAFACmodel(finalModel$Fac, processedFujita, 3, colourCols, legendTitles, xLabels, legendColNums, arrangeModes,
   continuousModes = c(FALSE,FALSE,TRUE),

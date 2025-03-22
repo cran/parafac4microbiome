@@ -41,30 +41,29 @@ qualityAssessment = assessModelQuality(processedShao$data, minNumComponents, max
 qualityAssessment$plots$overview
 
 ## ----model stability----------------------------------------------------------
-stabilityAssessment = assessModelStability(processedShao, minNumComponents=1, maxNumComponents=3, numFolds=numFolds, considerGroups=TRUE,
+stabilityAssessment = assessModelStability(processedShao, minNumComponents=1, maxNumComponents=4, numFolds=numFolds, considerGroups=TRUE,
                                            groupVariable="Delivery_mode", colourCols, legendTitles, xLabels, legendColNums, arrangeModes,
                                            ctol=ctol, maxit=maxit, numCores=numCores)
 
 stabilityAssessment$modelPlots[[1]]
 stabilityAssessment$modelPlots[[2]]
 stabilityAssessment$modelPlots[[3]]
+stabilityAssessment$modelPlots[[4]]
 
 ## ----model selection----------------------------------------------------------
-numComponents = 2
+numComponents = 3
 modelChoice = which(qualityAssessment$metrics$varExp[,numComponents] == max(qualityAssessment$metrics$varExp[,numComponents]))
 finalModel = qualityAssessment$models[[numComponents]][[modelChoice]]
 
 ## ----model plot---------------------------------------------------------------
-plotPARAFACmodel(finalModel$Fac, processedShao, 2, colourCols, legendTitles, xLabels, legendColNums, arrangeModes,
+plotPARAFACmodel(finalModel$Fac, processedShao, 3, colourCols, legendTitles, xLabels, legendColNums, arrangeModes,
   continuousModes = c(FALSE,FALSE,TRUE),
   overallTitle = "Shao PARAFAC model")
 
 ## ----flip loadings------------------------------------------------------------
-finalModel$Fac[[1]][,2] = -1 * finalModel$Fac[[1]][,2] # mode 1 component 2
-finalModel$Fac[[2]][,1] = -1 * finalModel$Fac[[2]][,1] # mode 2 component 1
-finalModel$Fac[[3]] = -1 * finalModel$Fac[[3]]         # all of mode 3
+finalModel = flipLoadings(finalModel, processedShao$data)
 
-plotPARAFACmodel(finalModel$Fac, processedShao, 2, colourCols, legendTitles, xLabels, legendColNums, arrangeModes,
+plotPARAFACmodel(finalModel$Fac, processedShao, 3, colourCols, legendTitles, xLabels, legendColNums, arrangeModes,
   continuousModes = c(FALSE,FALSE,TRUE),
   overallTitle = "Shao PARAFAC model")
 

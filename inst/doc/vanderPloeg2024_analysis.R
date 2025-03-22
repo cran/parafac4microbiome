@@ -14,7 +14,7 @@ library(ggplot2)
 library(ggpubr)
 
 ## ----data processing----------------------------------------------------------
-processedPloeg = processDataCube(vanderPloeg2024, sparsityThreshold=0.50, considerGroups=TRUE, groupVariable="RFgroup", CLR=TRUE, centerMode=1, scaleMode=2)
+processedPloeg = processDataCube(vanderPloeg2024$upper_jaw_lingual, sparsityThreshold=0.50, considerGroups=TRUE, groupVariable="RFgroup", CLR=TRUE, centerMode=1, scaleMode=2)
 
 ## ----vanderPloeg2024 num comp selection---------------------------------------
 # Setup
@@ -40,15 +40,6 @@ qualityAssessment = assessModelQuality(processedPloeg$data, minNumComponents, ma
 ## ----overview plot------------------------------------------------------------
 qualityAssessment$plots$overview
 
-## ----model stability----------------------------------------------------------
-stabilityAssessment = assessModelStability(processedPloeg, minNumComponents=1, maxNumComponents=3, numFolds=numFolds, considerGroups=TRUE,
-                                           groupVariable="Delivery_mode", colourCols, legendTitles, xLabels, legendColNums, arrangeModes,
-                                           ctol=ctol, maxit=maxit, numCores=numCores)
-
-stabilityAssessment$modelPlots[[1]]
-stabilityAssessment$modelPlots[[2]]
-stabilityAssessment$modelPlots[[3]]
-
 ## ----model selection----------------------------------------------------------
 numComponents = 2
 modelChoice = which(qualityAssessment$metrics$varExp[,numComponents] == max(qualityAssessment$metrics$varExp[,numComponents]))
@@ -59,8 +50,7 @@ plotPARAFACmodel(finalModel$Fac, processedPloeg, 2, colourCols, legendTitles, xL
   overallTitle = "vanderPloeg2024 PARAFAC model")
 
 ## ----flip loadings------------------------------------------------------------
-finalModel$Fac[[1]] = -1 * finalModel$Fac[[1]]         # all of mode 1
-finalModel$Fac[[2]] = -1 * finalModel$Fac[[2]]         # all of mode 2
+finalModel = flipLoadings(finalModel, processedPloeg$data)
 
 plotPARAFACmodel(finalModel$Fac, processedPloeg, 2, colourCols, legendTitles, xLabels, legendColNums, arrangeModes,
   continuousModes = c(FALSE,FALSE,TRUE),

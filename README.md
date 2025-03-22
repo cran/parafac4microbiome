@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# parafac4microbiome <a href="https://grvanderploeg.github.io/parafac4microbiome/"><img src="man/figures/logo.png" alt="parafac4microbiome website" align="right" height="139"/></a>
+# parafac4microbiome <a href="https://grvanderploeg.com/parafac4microbiome/"><img src="man/figures/logo.png" alt="parafac4microbiome website" align="right" height="139"/></a>
 
 <!-- badges: start -->
 
@@ -36,7 +36,7 @@ This package also comes with three example datasets.
 - `Shao2019`: a large cohort dataset of vaginally and caesarean-section
   born infants from London (<doi:10.1038/s41586-019-1560-1>).
 - `vanderPloeg2024`: a small gingivitis intervention dataset with
-  specific response groups (<doi:10.1101/2024.03.18.585469>).
+  response groups (<doi:10.1101/2024.03.18.585469>).
 
 ## Documentation
 
@@ -46,9 +46,8 @@ are elaborated in their respective vignettes
 `vignette("Fujita2023_analysis")`, `vignette("Shao2019_analysis")` and
 `vignette("vanderPloeg2024_analysis")`.
 
-These vignettes and all function documentation can be found on the
-GitHub pages website
-[here](https://grvanderploeg.github.io/parafac4microbiome/).
+These vignettes and all function documentation can be found
+[here](https://grvanderploeg.com/parafac4microbiome/).
 
 ## Installation
 
