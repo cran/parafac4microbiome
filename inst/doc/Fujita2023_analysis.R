@@ -20,9 +20,9 @@ processedFujita = processDataCube(Fujita2023, sparsityThreshold=0.99, CLR=TRUE, 
 # Setup
 minNumComponents = 1
 maxNumComponents = 3
-numRepetitions = 5 # number of randomly initialized models
-numFolds = 8 # number of jack-knifed models
-ctol = 1e-6
+numRepetitions = 3 # number of randomly initialized models
+numFolds = 4 # number of jack-knifed models
+ctol = 1e-5
 maxit = 200
 numCores= 1
 

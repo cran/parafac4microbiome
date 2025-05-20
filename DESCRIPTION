@@ -1,7 +1,7 @@
 Package: parafac4microbiome
 Title: Parallel Factor Analysis Modelling of Longitudinal Microbiome
         Data
-Version: 1.1.2
+Version: 1.2.1
 Authors@R: c(
     person("Geert Roelof", "van der Ploeg", , "g.r.ploeg@uva.nl", role = c("aut", "cre"),
            comment = c(ORCID = "0009-0007-5204-3386")),
@@ -29,22 +29,23 @@ Imports: compositions, cowplot, doParallel, dplyr, foreach, ggplot2,
         pracma, rlang, rTensor, stats, tidyr
 Depends: R (>= 2.10)
 LazyData: true
-Suggests: knitr, MicrobiotaProcess, phyloseq, rmarkdown,
-        SummarizedExperiment, testthat (>= 3.0.0),
-        TreeSummarizedExperiment, withr
+Suggests: knitr, phyloseq, rmarkdown, MicrobiotaProcess (>= 1.20.1),
+        TreeSummarizedExperiment (>= 2.16.1), SummarizedExperiment (>=
+        1.38.1), testthat (>= 3.0.0), withr
 Config/testthat/edition: 3
 VignetteBuilder: knitr
 URL: https://grvanderploeg.com/parafac4microbiome/,
         https://github.com/GRvanderPloeg/parafac4microbiome/
 BugReports: https://github.com/GRvanderPloeg/parafac4microbiome/issues
 NeedsCompilation: no
-Packaged: 2025-03-21 19:57:20 UTC; roelv
-Author: Geert Roelof van der Ploeg [aut, cre]
-    (<https://orcid.org/0009-0007-5204-3386>),
-  Johan Westerhuis [ctb] (<https://orcid.org/0000-0002-6747-9779>),
-  Anna Heintz-Buschart [ctb] (<https://orcid.org/0000-0002-9780-1933>),
-  Age Smilde [ctb] (<https://orcid.org/0000-0002-3052-4644>),
+Packaged: 2025-05-20 07:20:49 UTC; rploeg
+Author: Geert Roelof van der Ploeg [aut, cre] (ORCID:
+    <https://orcid.org/0009-0007-5204-3386>),
+  Johan Westerhuis [ctb] (ORCID: <https://orcid.org/0000-0002-6747-9779>),
+  Anna Heintz-Buschart [ctb] (ORCID:
+    <https://orcid.org/0000-0002-9780-1933>),
+  Age Smilde [ctb] (ORCID: <https://orcid.org/0000-0002-3052-4644>),
   University of Amsterdam [cph, fnd]
 Maintainer: Geert Roelof van der Ploeg <g.r.ploeg@uva.nl>
 Repository: CRAN
-Date/Publication: 2025-03-22 00:00:02 UTC
+Date/Publication: 2025-05-20 07:50:02 UTC

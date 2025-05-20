@@ -21,10 +21,10 @@ processedPloeg = processDataCube(vanderPloeg2024$upper_jaw_lingual, sparsityThre
 # For computational purposes we deviate from the default settings
 minNumComponents = 1
 maxNumComponents = 3
-numRepetitions = 5 # number of randomly initialized models
+numRepetitions = 3 # number of randomly initialized models
 numFolds = 5 # number of jack-knifed models
-ctol = 1e-6
-maxit = 250
+ctol = 1e-5
+maxit = 200
 numCores = 1
 
 colourCols = c("RFgroup", "Phylum", "")
