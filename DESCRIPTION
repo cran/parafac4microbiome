@@ -1,7 +1,7 @@
 Package: parafac4microbiome
 Title: Parallel Factor Analysis Modelling of Longitudinal Microbiome
         Data
-Version: 1.2.1
+Version: 1.3.2
 Authors@R: c(
     person("Geert Roelof", "van der Ploeg", , "g.r.ploeg@uva.nl", role = c("aut", "cre"),
            comment = c(ORCID = "0009-0007-5204-3386")),
@@ -25,20 +25,20 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 RoxygenNote: 7.3.2
 Imports: compositions, cowplot, doParallel, dplyr, foreach, ggplot2,
-        ggpubr, lifecycle, magrittr, methods, mize, multiway, parallel,
+        ggpubr, lifecycle, magrittr, methods, multiway, parallel,
         pracma, rlang, rTensor, stats, tidyr
 Depends: R (>= 2.10)
 LazyData: true
-Suggests: knitr, phyloseq, rmarkdown, MicrobiotaProcess (>= 1.20.1),
-        TreeSummarizedExperiment (>= 2.16.1), SummarizedExperiment (>=
-        1.38.1), testthat (>= 3.0.0), withr
+Suggests: knitr, phyloseq, rmarkdown, TreeSummarizedExperiment (>=
+        2.16.1), SummarizedExperiment (>= 1.38.1), testthat (>= 3.0.0),
+        withr, NPLStoolbox
 Config/testthat/edition: 3
 VignetteBuilder: knitr
 URL: https://grvanderploeg.com/parafac4microbiome/,
         https://github.com/GRvanderPloeg/parafac4microbiome/
 BugReports: https://github.com/GRvanderPloeg/parafac4microbiome/issues
 NeedsCompilation: no
-Packaged: 2025-05-20 07:20:49 UTC; rploeg
+Packaged: 2025-07-31 09:30:29 UTC; rploeg
 Author: Geert Roelof van der Ploeg [aut, cre] (ORCID:
     <https://orcid.org/0009-0007-5204-3386>),
   Johan Westerhuis [ctb] (ORCID: <https://orcid.org/0000-0002-6747-9779>),
@@ -48,4 +48,4 @@ Author: Geert Roelof van der Ploeg [aut, cre] (ORCID:
   University of Amsterdam [cph, fnd]
 Maintainer: Geert Roelof van der Ploeg <g.r.ploeg@uva.nl>
 Repository: CRAN
-Date/Publication: 2025-05-20 07:50:02 UTC
+Date/Publication: 2025-07-31 10:00:08 UTC

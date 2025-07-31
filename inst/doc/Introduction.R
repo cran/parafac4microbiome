@@ -30,7 +30,7 @@ head(processedFujita$data[,,1])
 
 ## ----fujita2023 modelling-----------------------------------------------------
 set.seed(0) # for reproducibility
-model = parafac(processedFujita$data, nfac=3, verbose=FALSE)
+model = parafac(processedFujita$data, nfac=3)
 
 head(model$Fac[[1]])
 head(model$Fac[[2]])

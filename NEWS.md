@@ -1,3 +1,19 @@
+# parafac4microbiome 1.3.2
+
+* Removal of importMicrobiotaProcess due to not meeting CRAN requirements.
+
+# parafac4microbiome 1.3.1
+
+* Addition of age, gender and oral health data to `vanderPloeg2024`.
+* Addition of TIFN2, MAINHEALTH, GOHTRANS, and AP articles to package documentation. These are only rendered for the website due to computational requirements.
+
+# parafac4microbiome 1.3.0
+
+* Removal of the all-at-once optimization for `parafac()` since the ALS scheme outperforms it under all circumstances.
+* Removal of deprecated verbose option for `parafac()`.
+* Renaming of vignettes to be easier to visually parse (also in preparation of the addition of new vignettes).
+* Overhaul of the entire testing suite to be more robust and fast.
+
 # parafac4microbiome 1.2.1
 
 * The package is now fully compatible with R version 4.5.

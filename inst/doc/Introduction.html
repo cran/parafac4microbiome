@@ -12,7 +12,7 @@
 
 
 
-<title>Introduction to PARAFAC modelling</title>
+<title>Introduction</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -336,7 +336,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 
 
 
-<h1 class="title toc-ignore">Introduction to PARAFAC modelling</h1>
+<h1 class="title toc-ignore">Introduction</h1>
 
 
 
@@ -370,9 +370,8 @@ details on the datasets we refer to the parafac4microbiome paper and to
 the original papers as listed in their respective help files. Modelling
 and selecting the appropriate number components are explained in more
 detail in the vignettes corresponding to each dataset:
-<code>vignette(&quot;Fujita2023_analysis&quot;)</code>,
-<code>vignette(&quot;Shao2019_analysis&quot;)</code> and
-<code>vignette(&quot;vanderPloeg2024_analysis&quot;)</code>.</p>
+<code>vignette(&quot;Fujita2023&quot;)</code>, <code>vignette(&quot;Shao2019&quot;)</code>
+and <code>vignette(&quot;vanderPloeg2024&quot;)</code>.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="fu">dim</span>(Fujita2023<span class="sc">$</span>data)</span>
 <span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="co">#&gt; [1]   8  28 110</span></span>
 <span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="fu">dim</span>(Shao2019<span class="sc">$</span>data)</span>
@@ -500,14 +499,14 @@ information.</p>
 Analysis. Here we arbitrarily set the number of factors (i.e. the number
 of components) to be three. This is normally the outcome of a more
 detailed investigation into the correct number of components, described
-in <code>vignette(&quot;Fujita2023_analysis&quot;)</code>,
-<code>vignette(&quot;Shao2019_analysis&quot;)</code> and
-<code>vignette(&quot;vanderPloeg2024_analysis&quot;)</code>. The output of the
-function is a list object containing the PARAFAC loadings in each mode
-in <code>model$Fac</code> and some statistics like R-squared and the sum
-of squared error.</p>
+in <code>vignette(&quot;Fujita2023&quot;)</code>,
+<code>vignette(&quot;Shao2019&quot;)</code> and
+<code>vignette(&quot;vanderPloeg2024&quot;)</code>. The output of the function is
+a list object containing the PARAFAC loadings in each mode in
+<code>model$Fac</code> and some statistics like R-squared and the sum of
+squared error.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">0</span>) <span class="co"># for reproducibility</span></span>
-<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>model <span class="ot">=</span> <span class="fu">parafac</span>(processedFujita<span class="sc">$</span>data, <span class="at">nfac=</span><span class="dv">3</span>, <span class="at">verbose=</span><span class="cn">FALSE</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>model <span class="ot">=</span> <span class="fu">parafac</span>(processedFujita<span class="sc">$</span>data, <span class="at">nfac=</span><span class="dv">3</span>)</span>
 <span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a></span>
 <span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a><span class="fu">head</span>(model<span class="sc">$</span>Fac[[<span class="dv">1</span>]])</span>
 <span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a><span class="co">#&gt;       [,1]   [,2]   [,3]</span></span>
@@ -575,10 +574,9 @@ bar plot.</li>
 <p>This concludes the introduction to the
 <code>parafac4microbiome</code> package. We hope this gives you
 sufficient information to get started. For more details on modelling
-specific datasets, please refer to
-<code>vignette(&quot;Fujita2023_analysis&quot;)</code>,
-<code>vignette(&quot;Shao2019_analysis&quot;)</code> and
-<code>vignette(&quot;vanderPloeg2024_analysis&quot;)</code>.</p>
+specific datasets, please refer to <code>vignette(&quot;Fujita2023&quot;)</code>,
+<code>vignette(&quot;Shao2019&quot;)</code> and
+<code>vignette(&quot;vanderPloeg2024&quot;)</code>.</p>
 </div>
 </div>
 
