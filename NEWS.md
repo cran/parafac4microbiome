@@ -1,3 +1,8 @@
+# parafac4microbiome 1.3.3
+
+* Updated maintainer email.
+* Temporary removal of some articles pending re-release of `CMTFtoolbox`.
+
 # parafac4microbiome 1.3.2
 
 * Removal of importMicrobiotaProcess due to not meeting CRAN requirements.
